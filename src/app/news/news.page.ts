@@ -13,7 +13,7 @@ export class NewsPage implements OnInit {
 
 	ngOnInit() {
 		flag:true;
-	  	this.NewsService.getData('everything?q=bitcoin&from=2019-01-13&sortBy=publishedAt').subscribe(data=>{
+	  	this.NewsService.getData('top-headlines?sources=bbc-news').subscribe(data=>{
 	  		console.log(data);
 	  		this.data = data;
 	  		this.flag=false;
