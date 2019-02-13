@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>news</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="data">
+	<ion-card *ngFor="let article of data.articles
+">
+	  <div class="item item-avatar" href="#" style="padding:25px">
+	  	<img src="{{article.urlToImage}}">
+	  	<h2>{{article.title}}</h2>
+	  	<p>{{article.description}}</p>
+	  </div>
+	  <!-- <ion-card-content>{{article.content}}</ion-card-content> -->
+	</ion-card>
+</ion-content>
